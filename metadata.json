@@ -1,0 +1,8 @@
+{
+  "name": "Medical Salud - Dr. Jorge Álvarez Quintero",
+  "description": "Consulta médica especializada en sobrepeso y obesidad con Bioimpedanciometría InBody en La Florida, Santiago. Atiende Fonasa y particular.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
