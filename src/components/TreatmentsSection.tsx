@@ -1,5 +1,5 @@
 import React from 'react';
-import { Check, MessageCircle, AlertCircle, Sparkles } from 'lucide-react';
+import { Check, MessageCircle, Sparkles } from 'lucide-react';
 import {
   WA_URL_CONSULTA,
   WA_URL_ONDA,
@@ -67,7 +67,7 @@ export const TreatmentsSection: React.FC = () => {
               </p>
 
               {/* Checklist */}
-              <ul className="space-y-3 mb-6 text-sm sm:text-base font-medium text-[#212121]">
+              <ul className="space-y-3 mb-8 text-sm sm:text-base font-medium text-[#212121]">
                 <li className="flex items-center gap-3">
                   <div className="w-5 h-5 rounded-full bg-[#3072E0]/15 flex items-center justify-center text-[#3072E0] shrink-0">
                     <Check className="w-3.5 h-3.5 stroke-[3]" />
@@ -88,25 +88,19 @@ export const TreatmentsSection: React.FC = () => {
                 </li>
               </ul>
 
-              {/* Price placeholder tag */}
-              <div className="mt-auto pt-4 border-t border-gray-100 mb-6">
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-amber-50 border border-amber-200 text-amber-800 text-xs font-mono font-medium">
-                  <AlertCircle className="w-3.5 h-3.5 shrink-0 text-amber-600" />
-                  <span>[FALTA: valor consulta particular y copago Fonasa]</span>
-                </div>
-              </div>
-
               {/* Action Button */}
-              <a
-                href={WA_URL_CONSULTA}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => trackWhatsAppClick('tratamientos', 'consulta')}
-                className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-[#3072E0] hover:bg-[#1F4FA8] text-white font-bold text-base shadow-md hover:shadow-lg transition-all duration-200 active:scale-95 min-h-[48px]"
-              >
-                <MessageCircle className="w-5 h-5 fill-current" />
-                <span>Agendar consulta (WhatsApp +56 9 4404 4891)</span>
-              </a>
+              <div className="mt-auto">
+                <a
+                  href={WA_URL_CONSULTA}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => trackWhatsAppClick('tratamientos', 'consulta')}
+                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-[#3072E0] hover:bg-[#1F4FA8] text-white font-bold text-base shadow-md hover:shadow-lg transition-all duration-200 active:scale-95 min-h-[48px]"
+                >
+                  <MessageCircle className="w-5 h-5 fill-current" />
+                  <span>Agendar consulta (WhatsApp +56 9 4404 4891)</span>
+                </a>
+              </div>
             </div>
           </div>
 
@@ -145,7 +139,7 @@ export const TreatmentsSection: React.FC = () => {
               </p>
 
               {/* Checklist */}
-              <ul className="space-y-3 mb-4 text-sm sm:text-base font-medium text-[#212121]">
+              <ul className="space-y-3 mb-5 text-sm sm:text-base font-medium text-[#212121]">
                 <li className="flex items-center gap-3">
                   <div className="w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 shrink-0">
                     <Check className="w-3.5 h-3.5 stroke-[3]" />
@@ -167,41 +161,28 @@ export const TreatmentsSection: React.FC = () => {
               </ul>
 
               {/* Note */}
-              <div className="p-3.5 rounded-xl bg-gray-50 border border-gray-100 text-xs text-[#666666] leading-relaxed mb-4">
+              <div className="p-3.5 rounded-xl bg-gray-50 border border-gray-100 text-xs text-[#666666] leading-relaxed mb-6">
                 <strong className="text-[#212121] font-semibold">Criterio médico:</strong> Ideal para
                 normopeso, sobrepeso u obesidad grado 1. Con más peso, el doctor recomienda primero bajar
                 de peso y luego remodelar.
               </div>
 
-              {/* Price placeholder tag */}
-              <div className="mt-auto pt-4 border-t border-gray-100 mb-6">
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-amber-50 border border-amber-200 text-amber-800 text-xs font-mono font-medium">
-                  <AlertCircle className="w-3.5 h-3.5 shrink-0 text-amber-600" />
-                  <span>[FALTA: valor por sesión o pack de Onda Plus]</span>
-                </div>
-              </div>
-
               {/* Action Button: routes to specific Onda WhatsApp */}
-              <a
-                href={WA_URL_ONDA}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => trackWhatsAppClick('tratamientos', 'onda_plus')}
-                className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-base shadow-md hover:shadow-lg transition-all duration-200 active:scale-95 min-h-[48px]"
-              >
-                <MessageCircle className="w-5 h-5 fill-current" />
-                <span>Agendar Onda Plus (WhatsApp +56 9 5730 0483)</span>
-              </a>
+              <div className="mt-auto">
+                <a
+                  href={WA_URL_ONDA}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => trackWhatsAppClick('tratamientos', 'onda_plus')}
+                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-base shadow-md hover:shadow-lg transition-all duration-200 active:scale-95 min-h-[48px]"
+                >
+                  <MessageCircle className="w-5 h-5 fill-current" />
+                  <span>Agendar Onda Plus (WhatsApp +56 9 5730 0483)</span>
+                </a>
+              </div>
             </div>
           </div>
 
-        </div>
-
-        {/* Note on WhatsApp active status */}
-        <div className="mt-6 text-center">
-          <p className="text-xs text-amber-700 bg-amber-50 border border-amber-200 px-4 py-2 rounded-xl inline-block font-mono">
-            [FALTA: confirmar que ambos números tienen WhatsApp activo; si no, usar tel: con los mismos números]
-          </p>
         </div>
 
       </div>

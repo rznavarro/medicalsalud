@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Play, Sparkles, AlertCircle, MessageCircle, Layers, CheckCircle2 } from 'lucide-react';
+import { Play, Sparkles, MessageCircle, Layers, CheckCircle2 } from 'lucide-react';
 import { WA_URL_ONDA, trackWhatsAppClick } from '../utils/analytics';
 
 export const OndaPlusSection: React.FC = () => {
@@ -23,7 +23,7 @@ export const OndaPlusSection: React.FC = () => {
         </div>
 
         {/* Content Grid: Video Lite + Scientific Explanation */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           
           {/* Video Column (Lite YouTube Embed) */}
           <div className="lg:col-span-7">
@@ -38,7 +38,6 @@ export const OndaPlusSection: React.FC = () => {
                     width={640}
                     height={360}
                     onError={(e) => {
-                      // Fallback to standard quality if maxres is not available
                       (e.target as HTMLImageElement).src = 'https://img.youtube.com/vi/H9qqrnrNPEM/hqdefault.jpg';
                     }}
                   />
@@ -131,17 +130,6 @@ export const OndaPlusSection: React.FC = () => {
             </div>
           </div>
 
-        </div>
-
-        {/* Ethics & Patient Consent Marker */}
-        <div className="max-w-3xl mx-auto rounded-2xl bg-amber-50/80 border border-amber-200 p-5 text-center">
-          <div className="flex items-center justify-center gap-2 text-amber-800 font-mono text-xs font-semibold mb-1">
-            <AlertCircle className="w-4 h-4 text-amber-600" />
-            <span>[FALTA: confirmar que son fotos reales de pacientes del doctor y con consentimiento; si no, NO mostrarlas]</span>
-          </div>
-          <p className="text-xs text-amber-700 leading-relaxed max-w-xl mx-auto">
-            Por estricta ética médica y cumplimiento de la normativa de privacidad y protección del paciente en Chile, no publicamos fotografías de antes y después sin consentimiento formal expreso y validación de autoría propia.
-          </p>
         </div>
 
       </div>

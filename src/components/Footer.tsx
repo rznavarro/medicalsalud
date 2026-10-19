@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Clock, Phone, Building2, AlertCircle } from 'lucide-react';
+import { MapPin, Clock, Phone, Building2 } from 'lucide-react';
 import {
   PHONE_CONSULTA,
   PHONE_CONSULTA_RAW,
@@ -39,20 +39,6 @@ export const Footer: React.FC = () => {
               Consulta médica especializada en sobrepeso y obesidad del Dr. Jorge Álvarez Quintero en
               La Florida, Santiago. Examen InBody incluido, atención Fonasa y particular.
             </p>
-
-            {/* Placeholders for contact email and social media */}
-            <div className="pt-2 space-y-2">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-neutral-900 border border-neutral-700 text-amber-400 text-xs font-mono">
-                <AlertCircle className="w-3.5 h-3.5 shrink-0" />
-                <span>Email: [FALTA: email de contacto]</span>
-              </div>
-              <div className="block">
-                <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-neutral-900 border border-neutral-700 text-amber-400 text-xs font-mono">
-                  <AlertCircle className="w-3.5 h-3.5 shrink-0" />
-                  <span>Redes: [FALTA: Instagram/Facebook si existen]</span>
-                </span>
-              </div>
-            </div>
           </div>
 
           {/* Location & Practice hours */}
@@ -126,13 +112,6 @@ export const Footer: React.FC = () => {
             </div>
           </div>
 
-        </div>
-
-        {/* Analytics & Pixel Placeholder */}
-        <div className="py-4 text-center border-b border-neutral-900">
-          <p className="text-xs text-amber-500/90 font-mono">
-            [FALTA: ID de Google Analytics 4 / Meta Pixel del cliente para vincular medición]
-          </p>
         </div>
 
         {/* Legal Disclaimer & Copyright */}
